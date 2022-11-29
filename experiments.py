@@ -65,7 +65,7 @@ def expLocalGlobal(data_path):
         return model, optm
 
     kfold(data_path,
-          256,
+          128,  # originally 256, reduced to 128 due to limited cuda memory
           50,
           model_optimizer=model_opt,
           loss=nn.BCELoss(),
