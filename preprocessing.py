@@ -1,11 +1,13 @@
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image, ImageFilter, ImageFile
 import pandas as pd
 import os
 import torch as t
 from imageio import imread
 from torch.utils.data import TensorDataset
 from os import path
+
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 img_size = 32
 
